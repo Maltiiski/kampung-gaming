@@ -1,9 +1,29 @@
 h1 {
   text-align: center;
   color: brown;
+  font-size: 3rem;
 }
 
 h5 {
   text-align: center;
   color: lightbrown;
+  font-size: 1.5rem;
+  margin-top: -1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #7788a0;
+}
+
+header {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d3d3d3;
+  min-width: 60vw;
+  border-radius: 20px;
+  border: 5px solid gray;
 }
