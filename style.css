@@ -1,3 +1,23 @@
+@import url('https://fonts.cdnfonts.com/css/open-sauce-one');
+
+:root {
+  --bg: #0b1220;
+  --nav: #111a2e;
+  --surface: #172238;
+  --border: #24324d;
+  --accent: #0a84ff;
+  --accent-hover: #3a9dff;
+  --text: #eeeef2;
+  --muted: #9aa7bd;
+  --glass-fill: linear-gradient( 135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.12) );
+  --glass-border: rgba(255, 255, 255, 0.28);
+  --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.45), inset 0 -1px 0 rgba(255, 255, 255, 0.08), inset 0 0 18px rgba(255, 255, 255, 0.05);
+}
+
+* {
+  font-family: 'Open Sauce One', sans-serif;
+}
+
 h1 {
   margin-top: 2vh;
   text-align: center;
@@ -26,7 +46,7 @@ header {
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: #1f2a44;
+  background-color: var(--nav);
   height: 200vh;
 }
 
@@ -36,9 +56,14 @@ body {
   justify-content: space-between;
   padding: 0 2rem;
   height: 64px;
-  background: #1f2a44;
-  color: #fff;
+  background: var(--glass-fill);
+  color: var(--text);
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(22px) saturate(190%) brightness(1.08);
 }
 
 .brand {
@@ -72,7 +97,7 @@ body {
 }
 
 .nav-links a {
-  color: #cfd6e6;
+  color: var(--text);
   text-decoration: none;
   padding: 0.4rem 0;
   border-bottom: 2px solid transparent;
@@ -81,22 +106,27 @@ body {
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-  color: #fff;
+  color: var(--text);
   border-color: #4fd1c5;
   outline: none;
 }
 
 .Big-logo {
+  padding-top: 7vh;
   margin-top: 10 vh;
-  max-width: 50vw;
+  max-width: 30vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .page.one {
-  background-color: #086288;
   height: 100vh;
+  background: linear-gradient(180deg, #142039 0%, #0f2a52 50%, #03488c 120%);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page.two {
@@ -106,17 +136,49 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #086288;
+  background: linear-gradient(180deg, #142039 0%, #0f2a52 50%, #03488c 120%);
+  background-attachment: fixed;
 }
 
 .philtitle {
-  margin-top: -5vh;
+  margin-top: 0;
 }
 
 .filsuf {
-  margin-top: 5vh;
-  width: 80vw;
+  width: 40vw;
   font-size: 1.2rem;
-  color: white;
+  color: var(--text);
   overflow-wrap: break-word;
+  text-align: center;
+}
+
+.Small-logo {
+  max-width: 3vw;
+}
+
+.shadow {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.glow {
+  color: #fff;
+  text-shadow:
+    0 0 6px rgba(252, 253, 255, 0.8),
+    0 0 14px rgba(213, 234, 255, 0.6),
+    0 0 28px rgba(204, 230, 255, 0.4);
+}
+
+.box {
+  display: flex;
+  background-color: var(--nav);
+  width: 40vw;
+  padding: 20px;
+  justify-content: center;
+  border-radius: 20px;
+  border: var(--border) solid 5px ;
+}
+
+.bigtitle {
+  width: 60vw;
+  text-align: center;
 }
