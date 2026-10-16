@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Kampung</title>
+    <meta name="theme-color" content="#111a2e">
+    <meta name="description" content="Kampung Gaming: komunitas yang melangkah ke masa depan dengan teknologi sebagai sarana kemajuan.">
+    <link rel="icon" href="Logo.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>Kampung Gaming</title>
   </head>
   <body>
-    <nav class="navbar shadow">
-      <div class="brand">
-        <img src="Logo.png" class="Small-logo">
+    <nav class="navbar shadow" aria-label="Navigasi utama">
+      <a class="brand" href="index.html">
+        <img src="Logo.png" class="Small-logo" alt="Logo Kampung Gaming">
         <span class="site-name">Kampung Gaming</span>
-      </div>
-      <ul class="nav-links">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li>
-          <a href="index.html">Home</a>
+          <a href="index.html" aria-current="page">Home</a>
         </li>
         <li>
           <a href="design.html">Design</a>
@@ -25,28 +33,49 @@
       </ul>
     </nav>
 
-    <section class="page one">
-      <img class="Big-logo" src="Logo.png">
-      <h1 class="bigtitle glow">Welcome to Kampung Gaming's Project</h1>
-    </section>
-    <section class="page two">
-      <h1 class="philtitle glow">FILOSOFI LOGO</h1>
-      <div class="box shadow">
-        <p class="filsuf">
-        Kampung Gaming adalah simbol sebuah komunitas yang melangkah menuju masa depan dengan teknologi sebagai sarana kemajuan, bukan sebagai penguasa kehidupan.
+    <main>
+      <section class="page one">
+        <img class="Big-logo" src="Logo.png" alt="Logo Kampung Gaming">
+        <h1 class="bigtitle glow">Welcome to Kampung Gaming's Project</h1>
+        <p class="tagline">Kampung yang maju, manusia yang tetap memegang kendali.</p>
+        <a class="cta" href="#filosofi">Baca filosofi logo</a>
+      </section>
 
-Terinspirasi oleh gagasan tentang kampung yang memiliki teknologi maju, logo ini menggambarkan perpaduan antara identitas komunitas, pemikiran modern, dan kemandirian manusia.
-Bentuk geometris yang tegas melambangkan fondasi yang kuat, keteraturan, dan kemampuan beradaptasi. 
+      <section class="page two" id="filosofi">
+        <h2 class="philtitle glow">FILOSOFI LOGO</h2>
 
-Warna putih merepresentasikan kejernihan berpikir serta keteguhan prinsip, sementara aksen biru elektrik menjadi simbol inovasi dan energi teknologi yang mendorong perkembangan.
+        <div class="box shadow">
+          <p class="filsuf">Kampung Gaming adalah simbol sebuah komunitas yang melangkah menuju masa depan dengan teknologi sebagai sarana kemajuan, bukan sebagai penguasa kehidupan.</p>
+          <p class="filsuf">Terinspirasi oleh gagasan tentang kampung yang memiliki teknologi maju, logo ini menggambarkan perpaduan antara identitas komunitas, pemikiran modern, dan kemandirian manusia.</p>
+          <p class="filsuf">Kehadiran warna biru yang terukur menegaskan bahwa kemajuan bukan tentang membiarkan teknologi menguasai setiap aspek kehidupan, melainkan tentang memanfaatkannya secara sadar dan bertanggung jawab.</p>
+          <p class="filsuf closing">Kampung Gaming percaya bahwa masa depan bukan milik mereka yang sekadar memiliki teknologi paling canggih, melainkan milik mereka yang mampu menggunakannya tanpa kehilangan kendali atas diri sendiri.</p>
+        </div>
 
-Kehadiran warna biru yang terukur menegaskan bahwa kemajuan bukan tentang membiarkan teknologi menguasai setiap aspek kehidupan, melainkan tentang memanfaatkannya secara sadar dan bertanggung jawab.
+        <ul class="values">
+          <li class="value shadow">
+            <span class="swatch swatch-shape" aria-hidden="true"></span>
+            <h3>Bentuk geometris</h3>
+            <p>Fondasi yang kuat, keteraturan, dan kemampuan beradaptasi.</p>
+          </li>
+          <li class="value shadow">
+            <span class="swatch swatch-white" aria-hidden="true"></span>
+            <h3>Putih</h3>
+            <p>Kejernihan berpikir serta keteguhan prinsip.</p>
+          </li>
+          <li class="value shadow">
+            <span class="swatch swatch-blue" aria-hidden="true"></span>
+            <h3>Biru elektrik</h3>
+            <p>Inovasi dan energi teknologi yang mendorong perkembangan.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-Kampung Gaming percaya bahwa masa depan bukan milik mereka yang sekadar memiliki teknologi paling canggih, melainkan milik mereka yang mampu menggunakannya tanpa kehilangan kendali atas diri sendiri.
-        </p>
-      </div>
-  
-    </section>
+    <footer class="footer">
+      <p>&copy; 2026 Kampung Gaming</p>
+      <a href="#top" class="to-top">Kembali ke atas</a>
+    </footer>
+
     <script src="./script.js"></script>
   </body>
 </html>
