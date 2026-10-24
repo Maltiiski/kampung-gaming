@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="./style.css">
     <title>Kampung Gaming</title>
   </head>
-  <body>
-    <nav class="navbar shadow" aria-label="Navigasi utama">
+  <body id="top">
+    <div class="progress" aria-hidden="true"></div>
+
+    <nav class="navbar" aria-label="Navigasi utama">
       <a class="brand" href="index.html">
         <img src="Logo.png" class="Small-logo" alt="Logo Kampung Gaming">
         <span class="site-name">Kampung Gaming</span>
@@ -21,30 +23,37 @@
         <span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li>
-          <a href="index.html" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="design.html">Design</a>
-        </li>
-        <li>
-          <a href="product.html">Product</a>
-        </li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="product.html">Product</a></li>
       </ul>
     </nav>
 
+    <nav class="dots" aria-label="Bagian halaman">
+      <a href="#top" data-label="Awal"></a>
+      <a href="#filosofi" data-label="Filosofi"></a>
+      <a href="#slide" data-label="Slide"></a>
+    </nav>
+
     <main>
-      <section class="page one">
-        <img class="Big-logo" src="Logo.png" alt="Logo Kampung Gaming">
-        <h1 class="bigtitle glow">Welcome to Kampung Gaming's Project</h1>
-        <p class="tagline">Kampung yang maju, manusia yang tetap memegang kendali.</p>
-        <a class="cta" href="#filosofi">Baca filosofi logo</a>
+      <section class="page one" data-section="top">
+        <div class="hero-copy">
+          <h1 class="bigtitle">Welcome to Kampung Gaming's Project</h1>
+          <p class="tagline">Kampung yang maju, manusia yang tetap memegang kendali.</p>
+          <div class="actions">
+            <a class="cta" href="#filosofi">Baca filosofi logo</a>
+            <a class="link" href="#slide">Lihat slide</a>
+          </div>
+        </div>
+        <div class="logo-stage">
+          <img class="Big-logo" src="Logo.png" alt="Logo Kampung Gaming">
+        </div>
       </section>
 
-      <section class="page two" id="filosofi">
-        <h2 class="philtitle glow">FILOSOFI LOGO</h2>
+      <section class="page two" id="filosofi" data-section="filosofi">
+        <h2 class="sec-title">Filosofi logo</h2>
 
-        <div class="box shadow">
+        <div class="box">
           <p class="filsuf">Kampung Gaming adalah simbol sebuah komunitas yang melangkah menuju masa depan dengan teknologi sebagai sarana kemajuan, bukan sebagai penguasa kehidupan.</p>
           <p class="filsuf">Terinspirasi oleh gagasan tentang kampung yang memiliki teknologi maju, logo ini menggambarkan perpaduan antara identitas komunitas, pemikiran modern, dan kemandirian manusia.</p>
           <p class="filsuf">Kehadiran warna biru yang terukur menegaskan bahwa kemajuan bukan tentang membiarkan teknologi menguasai setiap aspek kehidupan, melainkan tentang memanfaatkannya secara sadar dan bertanggung jawab.</p>
@@ -52,23 +61,47 @@
         </div>
 
         <ul class="values">
-          <li class="value shadow">
+          <li class="value" tabindex="0">
             <span class="swatch swatch-shape" aria-hidden="true"></span>
             <h3>Bentuk geometris</h3>
             <p>Fondasi yang kuat, keteraturan, dan kemampuan beradaptasi.</p>
           </li>
-          <li class="value shadow">
+          <li class="value" tabindex="0">
             <span class="swatch swatch-white" aria-hidden="true"></span>
             <h3>Putih</h3>
             <p>Kejernihan berpikir serta keteguhan prinsip.</p>
           </li>
-          <li class="value shadow">
+          <li class="value" tabindex="0">
             <span class="swatch swatch-blue" aria-hidden="true"></span>
             <h3>Biru elektrik</h3>
             <p>Inovasi dan energi teknologi yang mendorong perkembangan.</p>
           </li>
         </ul>
-        </section>
+      </section>
+
+      <section class="page three" id="slide" data-section="slide">
+        <h2 class="sec-title">Slide proyek</h2>
+        <p class="lede">Presentasi lengkap Kampung Gaming. Gunakan panah di slide untuk berpindah halaman.</p>
+
+        <figure class="deck" id="deck">
+          <div class="deck-frame">
+            <span class="deck-loading">Memuat slide…</span>
+            <iframe
+              loading="lazy"
+              title="Slide presentasi Kampung Gaming"
+              src="https://www.canva.com/design/DAHY422fAFA/v4uRGTlktOCaAFqc3RzLkQ/view?embed"
+              allowfullscreen="allowfullscreen"
+              allow="fullscreen"></iframe>
+          </div>
+          <figcaption class="deck-bar">
+            <span class="credit">Kampung Gaming oleh Piyan Shof</span>
+            <span class="deck-actions">
+              <button type="button" class="btn" id="fs-btn">Layar penuh</button>
+              <a class="btn" href="https://www.canva.com/design/DAHY422fAFA/v4uRGTlktOCaAFqc3RzLkQ/view?utm_content=DAHY422fAFA&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Buka di Canva</a>
+            </span>
+          </figcaption>
+        </figure>
+      </section>
     </main>
 
     <footer class="footer">
